@@ -1,0 +1,8 @@
+.skills-grid { display: grid; gap: 26px; grid-template-columns: repeat(auto-fill,minmax(230px,1fr)); max-width: 1200px; margin: 0 auto; }
+.skill-card { background: var(--bg-alt); padding: 18px 20px 22px; border-radius: var(--radius); border: var(--border); box-shadow: var(--shadow); position: relative; overflow: hidden; }
+.skill-card:before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg,rgba(59,130,246,.15),transparent); opacity: 0; transition: .4s; }
+.skill-card:hover:before { opacity: 1; }
+.skill-card h3 { margin: 0 0 10px; font-size: 1.05rem; letter-spacing: .5px; }
+.skill-card ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: .87rem; color: var(--muted); }
+.skill-card li { position: relative; padding-left: 14px; }
+.skill-card li:before { content: '›'; position: absolute; left: 0; color: var(--accent); }

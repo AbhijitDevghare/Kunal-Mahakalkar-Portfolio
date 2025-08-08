@@ -1,0 +1,6 @@
+.edu-cards { display: grid; gap: 28px; grid-template-columns: repeat(auto-fill,minmax(300px,1fr)); max-width: 1100px; margin: 0 auto; }
+.edu-card { background: var(--bg-alt); border: var(--border); padding: 22px 24px 26px; border-radius: var(--radius); box-shadow: var(--shadow); position: relative; }
+.edu-card h3 { margin: 0 0 8px; font-size: 1.05rem; }
+.edu-card .school { margin: 0 0 4px; font-weight: 600; color: var(--accent); }
+.edu-card .period { margin: 0 0 10px; font-size: .75rem; color: var(--muted); letter-spacing: .5px; }
+.edu-card .details { margin: 0; color: var(--muted); font-size: .85rem; }

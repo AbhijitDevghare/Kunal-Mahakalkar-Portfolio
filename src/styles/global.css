@@ -1,0 +1,54 @@
+:root {
+  --bg: #0d1117;
+  --bg-alt: #161b22;
+  --text: #e6edf3;
+  --muted: #8b949e;
+  --accent: #3b82f6;
+  --accent-gradient: linear-gradient(135deg,#3b82f6,#6366f1 60%,#8b5cf6);
+  --radius: 10px;
+  --max-width: 1180px;
+  --border: 1px solid #252b33;
+  --shadow: 0 4px 16px -4px rgba(0,0,0,.4), 0 2px 4px -2px rgba(0,0,0,.3);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+body, input, button, textarea { font-size: 16px; line-height: 1.5; }
+
+img { max-width: 100%; display: block; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+main { overflow: hidden; }
+
+.section { padding: 80px 24px; position: relative; }
+.section-title { font-size: clamp(1.8rem,3vw,2.4rem); margin: 0 0 32px; text-align: center; background: var(--accent-gradient); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.lead { max-width: 720px; margin: 0 auto 32px; color: var(--muted); text-align: center; }
+
+.btn { display: inline-block; padding: 12px 28px; border-radius: 30px; font-weight: 600; letter-spacing: .5px; cursor: pointer; border: none; transition: .25s background, .25s transform; text-decoration: none; }
+.btn.primary { background: var(--accent-gradient); color: #fff; box-shadow: var(--shadow); }
+.btn.primary:hover { filter: brightness(1.1); }
+.btn.outline { border: 2px solid var(--accent); color: var(--accent); background: transparent; }
+.btn.outline:hover { background: var(--accent); color: #fff; }
+.btn:active { transform: translateY(2px); }
+
+.accent { background: var(--accent-gradient); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+/* Layout helpers */
+.max { max-width: var(--max-width); margin: 0 auto; }
+
+/* Utilities */
+.grid { display: grid; gap: 24px; }
+
+/* Animations */
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(20px);} to { opacity: 1; transform: translateY(0);} }
+
+.section > * { animation: fadeInUp .6s ease forwards; }
