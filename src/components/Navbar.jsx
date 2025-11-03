@@ -20,7 +20,7 @@ const Navbar = () => {
   return (
     <header className="navbar">
       <div className="nav-inner">
-  <a className="brand" href="#home" onClick={close}>Amey Jagadale</a>
+  <a className="brand" href="#home" onClick={close}>Kunal Mahakalkar</a>
         <button aria-label="Menu" className={`burger ${open ? 'open' : ''}`} onClick={toggle}>
           <span />
           <span />
